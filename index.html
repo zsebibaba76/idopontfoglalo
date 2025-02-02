@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időpontfoglalás & Digitális Termékek</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=HUF"></script>
+</head>
+<body>
+    <div class="booking-header" onclick="toggleBookingMenu()">Időpont foglalás itt!</div>
+    <div id="booking-menu" class="hidden">
+        <div id="dates-container"></div>
+        <div id="times-container" class="hidden"></div>
+    </div>
+    <div id="payment-container" class="hidden">
+        <h2>Fizetés</h2>
+        <div id="paypal-button-container"></div>
+        <button id="close-payment" onclick="closePayment()">Mégse</button>
+    </div>
+    <div id="success-container" class="hidden">
+        <div class="content">
+            <p>Időpont foglalás sikeres! A részleteket e-mailben küldtük.</p>
+        </div>
+    </div>
+    <div class="products">
+        <h2>Digitális termékek</h2>
+        <div class="product" onclick="showPayment(7500)">Kis csomag - 7500 Ft</div>
+        <div class="product" onclick="showPayment(10000)">Közepes csomag - 10000 Ft</div>
+        <div class="product" onclick="showPayment(15000)">Nagy csomag - 15000 Ft</div>
+        <div class="product" onclick="showPayment(20000)">Extra csomag - 20000 Ft</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
